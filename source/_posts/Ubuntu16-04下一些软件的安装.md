@@ -5,7 +5,7 @@ tags: Ubuntu
 categories: CS
 ---
 
-最近需要用Linux系统来完成一些工作，于是又装起了熟悉的Ubuntu。果然又是熟悉的坑，又得再踩一遍，还是在这mark一下吧，反复google也是挺累的，是吧？
+最近需要用Linux系统来完成一些工作，于是又装起了熟悉的Ubuntu。果然又是熟悉的坑，又得再踩一遍，还是在这mark一下吧，反复google也是很累的。
 
 <!-- more -->
 
@@ -52,14 +52,6 @@ genpac -p "SOCKS5 127.0.0.1:1080" --gfwlist-proxy="SOCKS5 127.0.0.1:1080" --outp
 在代码行`exit 0`之前添加：  
 `sslocal -c /home/"YourUserName"/shadowsocks/shadowsocks.json --user nobody -d start`
 
-## 安装搜狗输入法
-- [官网下载](http://pinyin.sogou.com/linux/?r=pinyin)
-- dpkg解包安装  
-`dpkg -i /home/"YourUserName"/下载/s*.deb`
->注：会提示缺少依赖，用apt修复  
-- apt修复  
-`apt-get install -f`
-
 ## 安装哆点
 - 校园内网下载哆点
 - 安装哆点依赖包
@@ -83,20 +75,6 @@ apt-get install libstdc++6:i386
 `./DrClientLinux`
 - 终于好了，等待吧= =
 
-## 安装有道词典
-- [下载](http://cidian.youdao.com/index-linux.html)Ubuntu64位版本
-- 解压deb包到当前文件夹下  
-`dpkg -X youdao*.deb ./youdao-dict`
-- 解压deb包控制信息到`DEBIAN`文件下  
-`dpkg -e youdao*.deb ./youdao-dict/DEBIAN`
-- 删除`DEBIAN`文件夹中`control`文件里`gstreamer0.10-plugins-ugly`依赖包或将其更名为`gstreamer1.0-plugins-ugly`
-- 重新打包有道词典  
-`dpkg-deb -b ./youdao-dict youdao-dict.deb`
-- 解包安装  
-`dpkg -i ./youdao-dict.deb`
-- 还需要修复依赖  
-`apt-get install -f`
-
 ## 关闭客人会话
 - 新建配置文件  
 `sudo vi /etc/lightdm/lightdm.conf.d 50-no-guest.conf`
@@ -104,7 +82,5 @@ apt-get install libstdc++6:i386
 `allow-guest=false`
 - 终端输入  
 `sudo sh -c 'printf "[SeatDefaults]\nallow-guest=false\n" > /etc/lightdm/lightdm.conf.d/50-no-guest.conf'`
-
-终于是弄完了Ubuntu的一些基础软件安装与配置，可见Ubuntu系统下安装软件也并非一条`apt-get`代码就可以完事的，而当折腾系统本身超过了要在系统上完成的工作，你对它的热爱还会剩下多少呢？: )
 
 ---
