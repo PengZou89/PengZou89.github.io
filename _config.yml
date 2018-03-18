@@ -79,4 +79,4 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/pengzou89/pengzou89.github.io.git
-  branch: master
+  branch: public
