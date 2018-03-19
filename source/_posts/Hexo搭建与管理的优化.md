@@ -8,9 +8,6 @@ tags:
 categories: CS
 ---
 
-Hexo搭建与管理的优化
-===
-
 概述
 ---
 按一般方式，即hexo-deployer-git，部署到Github上的文件是source文件夹中.md博文转化的.html静态网页。作品是备份了，但是如果你换了台电脑，或者本地Hexo环境丢失后，就需要再搭建Hexo环境了。因此，以下通过一种简洁的方式实现了博文与本地环境的双备份。
