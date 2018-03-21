@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,Blog,Github," />
+  <meta name="keywords" content="Vim," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="概述按一般方式，即hexo-deployer-git，部署到Github上的文件是source文件夹中.md博文转化的.html静态网页。作品是备份了，但是如果你换了台电脑，或者本地Hexo环境丢失后，就需要再搭建Hexo环境了。因此，以下通过一种简洁的方式实现了博文与本地环境的双备份。">
-<meta name="keywords" content="Hexo,Blog,Github">
+<meta name="description" content="Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。">
+<meta name="keywords" content="Vim">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo搭建与管理的优化">
-<meta property="og:url" content="http://pengzou.me/2018/03/18/Hexo搭建与管理的优化/index.html">
+<meta property="og:title" content="Vim基本配置">
+<meta property="og:url" content="http://pengzou.me/2018/03/19/Vim基本配置/index.html">
 <meta property="og:site_name" content="PengZou&#39;s Blog">
-<meta property="og:description" content="概述按一般方式，即hexo-deployer-git，部署到Github上的文件是source文件夹中.md博文转化的.html静态网页。作品是备份了，但是如果你换了台电脑，或者本地Hexo环境丢失后，就需要再搭建Hexo环境了。因此，以下通过一种简洁的方式实现了博文与本地环境的双备份。">
+<meta property="og:description" content="Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-21T07:23:54.453Z">
+<meta property="og:updated_time" content="2018-03-21T07:23:54.456Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo搭建与管理的优化">
-<meta name="twitter:description" content="概述按一般方式，即hexo-deployer-git，部署到Github上的文件是source文件夹中.md博文转化的.html静态网页。作品是备份了，但是如果你换了台电脑，或者本地Hexo环境丢失后，就需要再搭建Hexo环境了。因此，以下通过一种简洁的方式实现了博文与本地环境的双备份。">
+<meta name="twitter:title" content="Vim基本配置">
+<meta name="twitter:description" content="Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://pengzou.me/2018/03/18/Hexo搭建与管理的优化/"/>
+  <link rel="canonical" href="http://pengzou.me/2018/03/19/Vim基本配置/"/>
 
 
 
 
 
-  <title>Hexo搭建与管理的优化 | PengZou's Blog</title>
+  <title>Vim基本配置 | PengZou's Blog</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://pengzou.me/2018/03/18/Hexo搭建与管理的优化/">
+    <link itemprop="mainEntityOfPage" href="http://pengzou.me/2018/03/19/Vim基本配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peng Zou">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo搭建与管理的优化</h1>
+          <h1 class="post-title" itemprop="name headline">Vim基本配置</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-18T10:50:00+08:00">
-                2018-03-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-19T22:14:00+08:00">
+                2018-03-19
               </time>
             
 
@@ -342,60 +342,11 @@
       
 
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>按一般方式，即hexo-deployer-git，部署到Github上的文件是source文件夹中.md博文转化的.html静态网页。作品是备份了，但是如果你换了台电脑，或者本地Hexo环境丢失后，就需要再搭建Hexo环境了。因此，以下通过一种简洁的方式实现了博文与本地环境的双备份。</p>
+        <p>Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。</p>
 <a id="more"></a>
-<h2 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h2><p>核心思路是：建立两个分支，一个master分支用来存放.md博文，另一个hexo分支用来存放Hexo环境文件。</p>
-<ol>
-<li>Github创建Github Pages仓库：Yourusername.github.io</li>
-<li><p>本地建好博客文件夹，并cd到此文件夹下，如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir Blog &amp;&amp; <span class="built_in">cd</span> Blog</span><br><span class="line">```    </span><br><span class="line">3. 克隆远程仓库，备份好.git文件夹后，清空当前目录。</span><br><span class="line">```bash</span><br><span class="line">$ git <span class="built_in">clone</span> git@github.com:Yourusername/Yourusername.github.io.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在本地仓库建站：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd Yourusername.github.io</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git</span><br><span class="line">hexo init Yourusername.github.io.git</span><br></pre></td></tr></table></figure>
-<p> 注：第3步的清空目录为此步服务，<code>hexo init &lt;folder&gt;</code> folder必须为空文件夹。   </p>
-</li>
-<li><p>修改<code>Yourusername.github.io</code>文件夹下的<code>_config.yml</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/Yourusername/yourusername.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将第3步备份好的.git文件夹复制到<code>Yourusername.github.io</code>文件夹下，覆盖其原有.git文件夹。</p>
-</li>
-<li><p>将hexo环境文件推送到远程库hexo分支：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git commit -m &quot;Hexo&quot;</span><br><span class="line">$ git push origin hexo</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成网站并将博文等文件推送到远程库master分支：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>大功告成，开始欣赏你的博客吧。</p>
-</li>
-</ol>
-<h2 id="管理流程"><a href="#管理流程" class="headerlink" title="管理流程"></a>管理流程</h2><ul>
-<li><h3 id="日常修改流程"><a href="#日常修改流程" class="headerlink" title="日常修改流程"></a>日常修改流程</h3>在本地对博客进行修改（添加博文、修改样式等）后，可通过以下方式进行推送：</li>
-</ul>
-<ol>
-<li><p>将hexo环境文件推送到远程库hexo分支：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git commit -m &quot;Hexo&quot;</span><br><span class="line">$ git push origin hexo</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成网站并将博文等文件推送到远程库master分支：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<ul>
-<li><h3 id="本地环境丢失"><a href="#本地环境丢失" class="headerlink" title="本地环境丢失"></a>本地环境丢失</h3>本地环境丢失或想在其他电脑上写博客，可通过以下方式部署环境：</li>
-</ul>
-<ol>
-<li><p>本地建好博客文件夹，并cd到此文件夹下，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir Blog &amp;&amp; cd Blog</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>克隆远程库（默认分支为hexo）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@github.com:Yourusername/Yourusername.github.io.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>建站：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd Yourusername.github.io</span><br><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p><strong>Think more, code less.</strong></p>
+<h4 id="1-在工作目录下新建或打开Vim配置文件："><a href="#1-在工作目录下新建或打开Vim配置文件：" class="headerlink" title="1.在工作目录下新建或打开Vim配置文件："></a>1.在工作目录下新建或打开Vim配置文件：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gedit ~/.vimrc</span><br></pre></td></tr></table></figure>
+<h4 id="2-复制以下代码到刚刚的-vimrc文件"><a href="#2-复制以下代码到刚刚的-vimrc文件" class="headerlink" title="2.复制以下代码到刚刚的.vimrc文件:"></a>2.复制以下代码到刚刚的<code>.vimrc</code>文件:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">&quot;==================================</span><br><span class="line">&quot;&quot;    Vim基本配置</span><br><span class="line">&quot;==================================</span><br><span class="line"></span><br><span class="line">&quot;关闭vi的一致性模式 避免以前版本的一些Bug和局限</span><br><span class="line">set nocompatible</span><br><span class="line"></span><br><span class="line">&quot;配置backspace键工作方式</span><br><span class="line">set backspace=indent,eol,start</span><br><span class="line"></span><br><span class="line">&quot;显示行号</span><br><span class="line">set number</span><br><span class="line"></span><br><span class="line">&quot;设置在编辑过程中右下角显示光标的行列信息</span><br><span class="line">set ruler</span><br><span class="line"></span><br><span class="line">&quot;当一行文字很长时取消换行</span><br><span class="line">&quot;set nowrap</span><br><span class="line"></span><br><span class="line">&quot;在状态栏显示正在输入的命令</span><br><span class="line">set showcmd</span><br><span class="line"></span><br><span class="line">&quot;设置历史记录条数</span><br><span class="line">set history=1000</span><br><span class="line"></span><br><span class="line">&quot;设置取消备份 禁止临时文件生成</span><br><span class="line">set nobackup</span><br><span class="line">set noswapfile</span><br><span class="line"></span><br><span class="line">&quot;突出现实当前行列</span><br><span class="line">&quot;set cursorline</span><br><span class="line">&quot;set cursorcolumn</span><br><span class="line"></span><br><span class="line">&quot;设置匹配模式 类似当输入一个左括号时会匹配相应的那个右括号</span><br><span class="line">set showmatch</span><br><span class="line"></span><br><span class="line">&quot;设置C/C++方式自动对齐</span><br><span class="line">set autoindent</span><br><span class="line">set cindent</span><br><span class="line"></span><br><span class="line">&quot;开启语法高亮功能</span><br><span class="line">syntax enable</span><br><span class="line">syntax on</span><br><span class="line"></span><br><span class="line">&quot;指定配色方案为256色</span><br><span class="line">set t_Co=256</span><br><span class="line"></span><br><span class="line">&quot;设置搜索时忽略大小写</span><br><span class="line">set ignorecase</span><br><span class="line"></span><br><span class="line">&quot;设置在Vim中可以使用鼠标 防止在Linux终端下无法拷贝</span><br><span class="line">set mouse=a</span><br><span class="line"></span><br><span class="line">&quot;设置Tab宽度</span><br><span class="line">set tabstop=4</span><br><span class="line"></span><br><span class="line">&quot;设置自动对齐空格数</span><br><span class="line">set shiftwidth=4</span><br><span class="line"></span><br><span class="line">&quot;设置按退格键时可以一次删除4个空格</span><br><span class="line">set softtabstop=4</span><br><span class="line"></span><br><span class="line">&quot;根据文件中其他地方的缩进空格个数来确定tab是多少空格</span><br><span class="line">set smarttab</span><br><span class="line"></span><br><span class="line">&quot;将Tab键自动转换成空格 真正需要Tab键时使用[Ctrl + V + Tab]</span><br><span class="line">set expandtab</span><br><span class="line"></span><br><span class="line">&quot;设置编码方式</span><br><span class="line">set encoding=utf-8</span><br><span class="line"></span><br><span class="line">&quot;自动判断编码时 依次尝试一下编码</span><br><span class="line">set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1</span><br><span class="line"></span><br><span class="line">&quot;设置换行符为unix</span><br><span class="line">set ff=unix</span><br><span class="line"></span><br><span class="line">&quot;检测文件类型</span><br><span class="line">filetype on</span><br><span class="line"></span><br><span class="line">&quot;针对不同的文件采用不同的缩进方式</span><br><span class="line">filetype indent on</span><br><span class="line"></span><br><span class="line">&quot;允许插件</span><br><span class="line">filetype plugin on</span><br><span class="line"></span><br><span class="line">&quot;启动智能补全</span><br><span class="line">filetype plugin indent on</span><br><span class="line"></span><br><span class="line">&quot;==================================</span><br></pre></td></tr></table></figure>
 <hr>
-<p>参考来源：<a href="http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="noopener">GitHub Pages + Hexo搭建博客</a></p>
 
       
     </div>
@@ -413,11 +364,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
-          
-            <a href="/tags/Blog/" rel="tag"># Blog</a>
-          
-            <a href="/tags/Github/" rel="tag"># Github</a>
+            <a href="/tags/Vim/" rel="tag"># Vim</a>
           
         </div>
       
@@ -430,8 +377,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/09/Ubuntu16-04下一些软件的安装/" rel="next" title="Ubuntu16.04下一些软件的安装">
-                <i class="fa fa-chevron-left"></i> Ubuntu16.04下一些软件的安装
+              <a href="/2018/03/18/Hexo搭建与管理的优化/" rel="next" title="Hexo搭建与管理的优化">
+                <i class="fa fa-chevron-left"></i> Hexo搭建与管理的优化
               </a>
             
           </div>
@@ -440,8 +387,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/19/Vim基本配置/" rel="prev" title="Vim基本配置">
-                Vim基本配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/21/PengZou's Comments/" rel="prev" title="PengZou's Comments">
+                PengZou's Comments <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -594,7 +541,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建流程"><span class="nav-number">2.</span> <span class="nav-text">搭建流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理流程"><span class="nav-number">3.</span> <span class="nav-text">管理流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#日常修改流程"><span class="nav-number">3.1.</span> <span class="nav-text">日常修改流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地环境丢失"><span class="nav-number">3.2.</span> <span class="nav-text">本地环境丢失</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结尾"><span class="nav-number">4.</span> <span class="nav-text">结尾</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-在工作目录下新建或打开Vim配置文件："><span class="nav-number">1.</span> <span class="nav-text">1.在工作目录下新建或打开Vim配置文件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-复制以下代码到刚刚的-vimrc文件"><span class="nav-number">2.</span> <span class="nav-text">2.复制以下代码到刚刚的.vimrc文件:</span></a></li></ol></div>
             
 
           </div>
