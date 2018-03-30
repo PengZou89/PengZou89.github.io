@@ -28,28 +28,31 @@ echo "Hello, world!"
 # 返回111作为测试码
 exit 111
 ```
-默认权限为  
-![Shellscript0](https://github.com/PengZou89/PengZou89.github.io/raw/hexo/source/images/Shellscript0.png)
+默认权限为
+
+{% asset_img Shellscript-0.png [Shellscript-0] %}
+
+
 
 ### 验证`./test.sh`直接执行方式：
 ```shell
 $ ./test.sh
 ```
 执行结果为：  
-![Shellscript1](https://github.com/PengZou89/PengZou89.github.io/raw/hexo/source/images/Shellscript1.png)
+{% asset_img Shellscript-1.png [Shellscript-1] %}
 添加`x权限`，再执行：
 ```shell
 $ chmod u+x test.sh
 $ ./test.sh
 ```
 执行结果为：  
-![Shellscript2](https://github.com/PengZou89/PengZou89.github.io/raw/hexo/source/images/Shellscript2.png)
+{% asset_img Shellscript-2.png [Shellscript-2] %}
 查看命令执行状态:
 ```shell
 echo $?
 ```
 执行结果为：  
-![Shellscript3](https://github.com/PengZou89/PengZou89.github.io/raw/hexo/source/images/Shellscript3.png)
+{% asset_img Shellscript-3.png [Shellscript-3] %}
 可以看出返回码为测试码111，因此：  
 **验证了`./test.sh`执行方式为打开一个subshell读取再执行，需要`x权限`**
 
@@ -60,13 +63,13 @@ $ chmod u-x test.sh
 $ sh ./test.sh
 ```
 执行结果为：  
-![Shellscript4](https://github.com/PengZou89/PengZou89.github.io/raw/hexo/source/images/Shellscript4.png)
+{% asset_img Shellscript-4.png [Shellscript-4] %}
 查看命令执行状态：
 ```shell
 echo $?
 ```
 执行结果为：  
-![Shellscript5](https://github.com/PengZou89/PengZou89.github.io/raw/hexo/source/images/Shellscript5.png)  
+{% asset_img Shellscript-5.png [Shellscript-5] %}  
 文件没有`x权限`依然执行成功，同时可以看出返回码为测试码111，因此：  
 **验证了`sh ./test.sh`执行方式亦为打开一个subshell读取Shell script再执行，但不需要`x权限`**
 
@@ -81,7 +84,7 @@ source ./test.sh
 ```
 删除`test.sh`中`exit 111`语句，再执行：  
 执行结果为：  
-![Shellscript6](https://github.com/PengZou89/PengZou89.github.io/raw/hexo/source/images/Shellscript6.png)
+{% asset_img Shellscript-6.png [Shellscript-6] %}
 文件没有`x权限`，且需删除`exit`语句才正常输出`Hello, world!`，因此：  
 **验证了`sh ./test.sh`执行方式为在当前shell上读取执行，不需要`x权限`**
 
