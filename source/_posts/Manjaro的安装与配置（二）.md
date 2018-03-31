@@ -7,15 +7,15 @@ tags:
   - Manjaro
 ---
 
-# 概述
+## 概述
 
 [上篇博文](http://pengzou.me/2018/03/30/Manjaro%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE%EF%BC%88%E4%B8%80%EF%BC%89/)分享了Manjaro的安装，才思泉涌（其实就是想做篇笔记），在此再分享一些我的Manjaro配置，以及遇到的一些坑和辛苦试验出来的解决方案。
 
 <!-- more -->
 
-# 配置
+## 配置
 
-## 设置国内软件源
+### 设置国内软件源
 
 1. 设置官方镜像源
 
@@ -64,7 +64,7 @@ tags:
     AURURL=”https://aur.tuna.tsinghua.edu.cn”
     ```
 
-## 安装搜狗输入法
+### 安装搜狗输入法
 
 1. 安装`Fcitx`
 
@@ -96,19 +96,19 @@ tags:
 
 5. 注销再登录， 就可以使用搜狗输入法了。
 
-## 安装Chrome
+### 安装Chrome
 
 ```shell
 $ sudo pacman -S google-chrome
 ```
 
-## 安装Shadowsocks
+### 安装Shadowsocks
 
 ```shell
 $ sudo pacman -S shadowsocks-qt5
 ```
 
-## 安装SwitchyOmega插件
+### 安装SwitchyOmega插件
 
 1. [下载](https://github.com/FelisCatus/SwitchyOmega/releases/download/v2.5.10/SwitchyOmega_Chromium.crx)SwitchyOmega
 
@@ -134,7 +134,7 @@ $ sudo pacman -S shadowsocks-qt5
 
 6. 打开`Shadowsocks`，连接好服务器；插件状态设置为`auto switch`，就可以享受科学上网了。
 
-## 安装Tim
+### 安装Tim
 
 有两种方式，推荐第二种，省去了安装确认的流程。
 
@@ -162,7 +162,7 @@ $ sudo pacman -S shadowsocks-qt5
 
     搜索`deepin.com.qq.office`，直接安装。
 
-## 安装WPS
+### 安装WPS
 
 ```shell
 $ yaourt wps-office
@@ -174,7 +174,7 @@ $ yaourt wps-office
 
 注：此处有个坑，WPS安装的字体会对Tim字体造成影响，稍后再分享我的解决方案。
 
-## 安装深度截图
+### 安装深度截图
 
 类似于Win下的QQ截图，超级好用，在此安利一下。
 
@@ -188,9 +188,9 @@ $ yaourt deepin-screenshot
 
 添加命令`deepin-screenshot`，快捷键可根据喜好设定，最好不好与其他快捷键相冲突。如果看不到按钮，就将鼠标放在右边红框上面，滚轮下拉。这里非常想吐槽一下，窗口默认这么小，而且还需要把鼠标放在滑动条上才能下滑，这一上手谁能注意到啊！
 
-# Some tips
+## Some tips
 
-## 更改时间设置
+### 更改时间设置
 
 安装Windows和Linux双系统一直会碰到一个问题就是两个系统采用的标准时不一样，然后系统反复将时间写入CMOS造成8小时的时间差。Manjaro解决方式如下：
 
@@ -198,7 +198,7 @@ $ yaourt deepin-screenshot
 sudo timedatectl set-local-rtc 1
 ```
 
-## 关闭鼠标加速
+### 关闭鼠标加速
 
 创建`/etc/X11/xorg.conf.d/50-mouse-acceleration.conf`文件，添加：
 
@@ -211,7 +211,7 @@ Section "InputClass"
 EndSection
 ```
 
-## Xfce-teminal-dropdown 快捷键唤出失败
+### Xfce-teminal-dropdown 快捷键唤出失败
 
 在设置里调大字体后，我就发现终端下拉界面通过快捷键关闭后无法再通过快捷键唤出，界面快速闪烁几次后就消失了，而且再调小字体到原来大小也无法恢复。个人猜想是Xfce的小bug，试验出了以下两种解决方式：
 
@@ -225,7 +225,7 @@ EndSection
 
     注：首选项里也有这项设置，但是在我的系统上无法生效，只能通过按下这一按钮实现功能。
 
-## 安装WPS后Tim字体受到影响，变为隶书、宋体或乱码
+### 安装WPS后Tim字体受到影响，变为隶书、宋体或乱码
 
 在安装WPS后Tim字体变为隶书，网上也没搜到相关问题，突然灵机一动想到只有WPS里面才有隶书字体，在找到了WPS字体文件夹所在后，经过反复试验，发现其中4种字体会对Tim产生影响。因此可以转移这4种字体，等需要用到的时候再复制回来。
 
@@ -235,7 +235,7 @@ WPS字体文件夹为`/usr/share/fonts/wps-office`
 
 具体转移到哪就看自己喜好了。
 
-# 总结
+## 总结
 
 一天写两篇博文真的是非常累，也非常花时间，不过看着两篇博文成型，也是非常有成就感的。Manjaro在国内的用户还不多，希望我能抛砖引玉，引出更多更好的博文，同时也希望能将Manjaro这么优秀的发行版安利出去，为大家带来更好的Linux体验吧。
 

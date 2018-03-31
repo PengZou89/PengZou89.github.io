@@ -5,7 +5,7 @@ tags: Vim
 categories: CS
 ---
 
-# 概述
+## 概述
 
 Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。
 

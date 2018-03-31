@@ -7,7 +7,7 @@ tags:
   - Manjaro
 ---
 
-# 概述
+## 概述
 
 我之前一直在用Ubuntu，可是Ubuntu软件有点少，而且折腾Tim、WeChat等软件太麻烦，于是就心生了换个发行版的想法。知乎上一直有人安利Arch，可是看过Arch的安装与配置教程之后，我就惊叹这个发行版是真的”定制“，可也是真的”折腾“，就萌生了退意——我只是想要个能用的工作环境而已，并不想为配置环境花费大量的精力。于是就看上了Manjaro。
 
@@ -17,9 +17,9 @@ Manjaro基于Arch，但不需要像Arch那样从零开始配置，而且还继�
 
 <!-- more -->
 
-# 安装
+## 安装
 
-## 制作启动盘
+### 制作启动盘
 
 1. 下载[Manjaro-Xfce镜像](https://downloads.sourceforge.net/manjarolinux/manjaro-xfce-17.1.7-stable-x86_64.iso)，若速度慢可在其官网换清华源下载
 
@@ -29,7 +29,7 @@ Manjaro基于Arch，但不需要像Arch那样从零开始配置，而且还继�
 
     注：我用ISO模式没有安装成功，在安装的后期会弹出一个类似于`Installation failed:Boost.Python-Error`的窗口。
 
-## UEFI模式安装
+### UEFI模式安装
 
 1. 选择闭源驱动，在`Boot：...`栏上回车，进入安装
 

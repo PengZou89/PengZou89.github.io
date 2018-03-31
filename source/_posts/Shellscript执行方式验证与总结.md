@@ -7,15 +7,15 @@ tags:
     - Shell script
 ---
 
-# 概述
+## 概述
 
 Shell script有三种执行方式，`相对/绝对路径直接执行`、`sh命令执行`、`source命令执行`，那这三种方式各有什么区别呢？在此通过`test.sh`来验证与总结。
 
 <!-- more -->
 
-# 验证
+## 验证
 
-## 新建`test.sh`：
+### 新建`test.sh`：
 
 ```shell
 #! /bin/bash
@@ -31,7 +31,7 @@ exit 111
 
 {% asset_img Shellscript-0.png [Shellscript-0] %}
 
-## 验证`./test.sh`直接执行方式：
+### 验证`./test.sh`直接执行方式：
 
 ```shell
 $ ./test.sh
@@ -66,7 +66,7 @@ echo $?
 
 **验证了`./test.sh`执行方式为打开一个subshell读取再执行，需要`x权限`**
 
-## 验证`sh ./test.sh`执行方式：
+### 验证`sh ./test.sh`执行方式：
 
 去除`x权限`，再执行：
 
@@ -93,7 +93,7 @@ echo $?
 
 **验证了`sh ./test.sh`执行方式亦为打开一个subshell读取Shell script再执行，但不需要`x权限`**
 
-## 验证`source ./test.sh`执行方式：
+### 验证`source ./test.sh`执行方式：
 
 注：`source`命令即为`.`命令
 
@@ -117,7 +117,7 @@ source ./test.sh
 
 **验证了`sh ./test.sh`执行方式为在当前shell上读取执行，不需要`x权限`**
 
-# 总结
+## 总结
 
 | 执行方式          | subshell？ | x权限？  |
 | :---:            | :---:      | :---:   |
