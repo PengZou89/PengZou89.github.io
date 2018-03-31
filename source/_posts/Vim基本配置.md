@@ -5,107 +5,111 @@ tags: Vim
 categories: CS
 ---
 
+# 概述
+
 Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。
 
 <!-- more -->
 
-#### 在工作目录下新建或打开Vim配置文件：
-```
-$ gedit ~/.vimrc
-```
+1. 在工作目录下新建或打开Vim配置文件：
 
-#### 复制以下代码到刚刚的`.vimrc`文件:
+    ```shell
+    $ gedit ~/.vimrc
+    ```
 
-```
-"==================================
-""    Vim基本配置
-"==================================
+2. 复制以下代码到刚刚的`.vimrc`文件:
 
-"关闭vi的一致性模式 避免以前版本的一些Bug和局限
-set nocompatible
+    ```
+    "==================================
+    ""    Vim基本配置
+    "==================================
 
-"配置backspace键工作方式
-set backspace=indent,eol,start
+    "关闭vi的一致性模式 避免以前版本的一些Bug和局限
+    set nocompatible
 
-"显示行号
-set number
+    "配置backspace键工作方式
+    set backspace=indent,eol,start
 
-"设置在编辑过程中右下角显示光标的行列信息
-set ruler
+    "显示行号
+    set number
 
-"当一行文字很长时取消换行
-"set nowrap
+    "设置在编辑过程中右下角显示光标的行列信息
+    set ruler
 
-"在状态栏显示正在输入的命令
-set showcmd
+    "当一行文字很长时取消换行
+    "set nowrap
 
-"设置历史记录条数
-set history=1000
+    "在状态栏显示正在输入的命令
+    set showcmd
 
-"设置取消备份 禁止临时文件生成
-set nobackup
-set noswapfile
+    "设置历史记录条数
+    set history=1000
 
-"突出现实当前行列
-"set cursorline
-"set cursorcolumn
+    "设置取消备份 禁止临时文件生成
+    set nobackup
+    set noswapfile
 
-"设置匹配模式 类似当输入一个左括号时会匹配相应的那个右括号
-set showmatch
+    "突出现实当前行列
+    "set cursorline
+    "set cursorcolumn
 
-"设置C/C++方式自动对齐
-set autoindent
-set cindent
+    "设置匹配模式 类似当输入一个左括号时会匹配相应的那个右括号
+    set showmatch
 
-"开启语法高亮功能
-syntax enable
-syntax on
+    "设置C/C++方式自动对齐
+    set autoindent
+    set cindent
 
-"指定配色方案为256色
-set t_Co=256
+    "开启语法高亮功能
+    syntax enable
+    syntax on
 
-"设置搜索时忽略大小写
-set ignorecase
+    "指定配色方案为256色
+    set t_Co=256
 
-"设置在Vim中可以使用鼠标 防止在Linux终端下无法拷贝
-set mouse=a
+    "设置搜索时忽略大小写
+    set ignorecase
 
-"设置Tab宽度
-set tabstop=4
+    "设置在Vim中可以使用鼠标 防止在Linux终端下无法拷贝
+    set mouse=a
 
-"设置自动对齐空格数
-set shiftwidth=4
+    "设置Tab宽度
+    set tabstop=4
 
-"设置按退格键时可以一次删除4个空格
-set softtabstop=4
+    "设置自动对齐空格数
+    set shiftwidth=4
 
-"根据文件中其他地方的缩进空格个数来确定tab是多少空格
-set smarttab
+    "设置按退格键时可以一次删除4个空格
+    set softtabstop=4
 
-"将Tab键自动转换成空格 真正需要Tab键时使用[Ctrl + V + Tab]
-set expandtab
+    "根据文件中其他地方的缩进空格个数来确定tab是多少空格
+    set smarttab
 
-"设置编码方式
-set encoding=utf-8
+    "将Tab键自动转换成空格 真正需要Tab键时使用[Ctrl + V + Tab]
+    set expandtab
 
-"自动判断编码时 依次尝试一下编码
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+    "设置编码方式
+    set encoding=utf-8
 
-"设置换行符为unix
-set ff=unix
+    "自动判断编码时 依次尝试一下编码
+    set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
-"检测文件类型
-filetype on
+    "设置换行符为unix
+    set ff=unix
 
-"针对不同的文件采用不同的缩进方式
-filetype indent on
+    "检测文件类型
+    filetype on
 
-"允许插件
-filetype plugin on
+    "针对不同的文件采用不同的缩进方式
+    filetype indent on
 
-"启动智能补全
-filetype plugin indent on
+    "允许插件
+    filetype plugin on
 
-"==================================
-```
+    "启动智能补全
+    filetype plugin indent on
+
+    "==================================
+    ```
+
 ---
