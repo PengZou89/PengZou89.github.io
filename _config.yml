@@ -10,6 +10,19 @@ author: Peng Zou
 language: zh-Hans
 timezone: 
 
+# Swiftype站内搜索
+swiftype_key: FUxzY6YMXpyK95yPFzrm
+
+# Feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://pengzou.me
