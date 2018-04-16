@@ -25,6 +25,8 @@
 
 
 
+  <meta name="google-site-verification" content="PSYUfSK-rnw3EMkSgVHFzmbBr-OrTM53cGRueRxoUhc" />
+
 
 
 
@@ -74,23 +76,25 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="PengZou's Blog" type="application/atom+xml" />
 
 
 
 
 
-<meta name="description" content="Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。">
+
+<meta name="description" content="概述Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。">
 <meta name="keywords" content="Vim">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vim基本配置">
 <meta property="og:url" content="http://pengzou.me/2018/03/19/Vim基本配置/index.html">
 <meta property="og:site_name" content="PengZou&#39;s Blog">
-<meta property="og:description" content="Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。">
+<meta property="og:description" content="概述Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-21T07:23:54.456Z">
+<meta property="og:updated_time" content="2018-04-15T10:55:13.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vim基本配置">
-<meta name="twitter:description" content="Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。">
+<meta name="twitter:description" content="概述Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。">
 
 
 
@@ -131,6 +135,15 @@
 
 
 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-116716100-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
 
 
@@ -222,9 +235,39 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'FUxzY6YMXpyK95yPFzrm','2.0.0');
+</script>
+
+
+
+    </div>
   
 </nav>
 
@@ -342,10 +385,16 @@
       
 
       
-        <p>Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Vim一些基本配置，不牵涉插件，即配即用，在此mark一下。</p>
 <a id="more"></a>
-<h4 id="1-在工作目录下新建或打开Vim配置文件："><a href="#1-在工作目录下新建或打开Vim配置文件：" class="headerlink" title="1.在工作目录下新建或打开Vim配置文件："></a>1.在工作目录下新建或打开Vim配置文件：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gedit ~/.vimrc</span><br></pre></td></tr></table></figure>
-<h4 id="2-复制以下代码到刚刚的-vimrc文件"><a href="#2-复制以下代码到刚刚的-vimrc文件" class="headerlink" title="2.复制以下代码到刚刚的.vimrc文件:"></a>2.复制以下代码到刚刚的<code>.vimrc</code>文件:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">&quot;==================================</span><br><span class="line">&quot;&quot;    Vim基本配置</span><br><span class="line">&quot;==================================</span><br><span class="line"></span><br><span class="line">&quot;关闭vi的一致性模式 避免以前版本的一些Bug和局限</span><br><span class="line">set nocompatible</span><br><span class="line"></span><br><span class="line">&quot;配置backspace键工作方式</span><br><span class="line">set backspace=indent,eol,start</span><br><span class="line"></span><br><span class="line">&quot;显示行号</span><br><span class="line">set number</span><br><span class="line"></span><br><span class="line">&quot;设置在编辑过程中右下角显示光标的行列信息</span><br><span class="line">set ruler</span><br><span class="line"></span><br><span class="line">&quot;当一行文字很长时取消换行</span><br><span class="line">&quot;set nowrap</span><br><span class="line"></span><br><span class="line">&quot;在状态栏显示正在输入的命令</span><br><span class="line">set showcmd</span><br><span class="line"></span><br><span class="line">&quot;设置历史记录条数</span><br><span class="line">set history=1000</span><br><span class="line"></span><br><span class="line">&quot;设置取消备份 禁止临时文件生成</span><br><span class="line">set nobackup</span><br><span class="line">set noswapfile</span><br><span class="line"></span><br><span class="line">&quot;突出现实当前行列</span><br><span class="line">&quot;set cursorline</span><br><span class="line">&quot;set cursorcolumn</span><br><span class="line"></span><br><span class="line">&quot;设置匹配模式 类似当输入一个左括号时会匹配相应的那个右括号</span><br><span class="line">set showmatch</span><br><span class="line"></span><br><span class="line">&quot;设置C/C++方式自动对齐</span><br><span class="line">set autoindent</span><br><span class="line">set cindent</span><br><span class="line"></span><br><span class="line">&quot;开启语法高亮功能</span><br><span class="line">syntax enable</span><br><span class="line">syntax on</span><br><span class="line"></span><br><span class="line">&quot;指定配色方案为256色</span><br><span class="line">set t_Co=256</span><br><span class="line"></span><br><span class="line">&quot;设置搜索时忽略大小写</span><br><span class="line">set ignorecase</span><br><span class="line"></span><br><span class="line">&quot;设置在Vim中可以使用鼠标 防止在Linux终端下无法拷贝</span><br><span class="line">set mouse=a</span><br><span class="line"></span><br><span class="line">&quot;设置Tab宽度</span><br><span class="line">set tabstop=4</span><br><span class="line"></span><br><span class="line">&quot;设置自动对齐空格数</span><br><span class="line">set shiftwidth=4</span><br><span class="line"></span><br><span class="line">&quot;设置按退格键时可以一次删除4个空格</span><br><span class="line">set softtabstop=4</span><br><span class="line"></span><br><span class="line">&quot;根据文件中其他地方的缩进空格个数来确定tab是多少空格</span><br><span class="line">set smarttab</span><br><span class="line"></span><br><span class="line">&quot;将Tab键自动转换成空格 真正需要Tab键时使用[Ctrl + V + Tab]</span><br><span class="line">set expandtab</span><br><span class="line"></span><br><span class="line">&quot;设置编码方式</span><br><span class="line">set encoding=utf-8</span><br><span class="line"></span><br><span class="line">&quot;自动判断编码时 依次尝试一下编码</span><br><span class="line">set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1</span><br><span class="line"></span><br><span class="line">&quot;设置换行符为unix</span><br><span class="line">set ff=unix</span><br><span class="line"></span><br><span class="line">&quot;检测文件类型</span><br><span class="line">filetype on</span><br><span class="line"></span><br><span class="line">&quot;针对不同的文件采用不同的缩进方式</span><br><span class="line">filetype indent on</span><br><span class="line"></span><br><span class="line">&quot;允许插件</span><br><span class="line">filetype plugin on</span><br><span class="line"></span><br><span class="line">&quot;启动智能补全</span><br><span class="line">filetype plugin indent on</span><br><span class="line"></span><br><span class="line">&quot;==================================</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>在工作目录下新建或打开Vim配置文件：</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gedit ~/.vimrc</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>复制以下代码到刚刚的<code>.vimrc</code>文件:</p>
+ <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">"==================================</span></span><br><span class="line"><span class="string">""</span>    Vim基本配置</span><br><span class="line"><span class="comment">"==================================</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"关闭vi的一致性模式 避免以前版本的一些Bug和局限</span></span><br><span class="line"><span class="keyword">set</span> nocompatible</span><br><span class="line"></span><br><span class="line"><span class="comment">"配置backspace键工作方式</span></span><br><span class="line"><span class="keyword">set</span> backspace=<span class="built_in">indent</span>,eol,start</span><br><span class="line"></span><br><span class="line"><span class="comment">"显示行号</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"设置在编辑过程中右下角显示光标的行列信息</span></span><br><span class="line"><span class="keyword">set</span> ruler</span><br><span class="line"></span><br><span class="line"><span class="comment">"当一行文字很长时取消换行</span></span><br><span class="line"><span class="comment">"set nowrap</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"在状态栏显示正在输入的命令</span></span><br><span class="line"><span class="keyword">set</span> showcmd</span><br><span class="line"></span><br><span class="line"><span class="comment">"设置历史记录条数</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">history</span>=<span class="number">1000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"设置取消备份 禁止临时文件生成</span></span><br><span class="line"><span class="keyword">set</span> nobackup</span><br><span class="line"><span class="keyword">set</span> noswapfile</span><br><span class="line"></span><br><span class="line"><span class="comment">"突出现实当前行列</span></span><br><span class="line"><span class="comment">"set cursorline</span></span><br><span class="line"><span class="comment">"set cursorcolumn</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"设置匹配模式 类似当输入一个左括号时会匹配相应的那个右括号</span></span><br><span class="line"><span class="keyword">set</span> showmatch</span><br><span class="line"></span><br><span class="line"><span class="comment">"设置C/C++方式自动对齐</span></span><br><span class="line"><span class="keyword">set</span> autoindent</span><br><span class="line"><span class="keyword">set</span> <span class="built_in">cindent</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"开启语法高亮功能</span></span><br><span class="line"><span class="keyword">syntax</span> enable</span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"指定配色方案为256色</span></span><br><span class="line"><span class="keyword">set</span> t_Co=<span class="number">256</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"设置搜索时忽略大小写</span></span><br><span class="line"><span class="keyword">set</span> ignorecase</span><br><span class="line"></span><br><span class="line"><span class="comment">"设置在Vim中可以使用鼠标 防止在Linux终端下无法拷贝</span></span><br><span class="line"><span class="keyword">set</span> mouse=<span class="keyword">a</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"设置Tab宽度</span></span><br><span class="line"><span class="keyword">set</span> tabstop=<span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"设置自动对齐空格数</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"设置按退格键时可以一次删除4个空格</span></span><br><span class="line"><span class="keyword">set</span> softtabstop=<span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"根据文件中其他地方的缩进空格个数来确定tab是多少空格</span></span><br><span class="line"><span class="keyword">set</span> smarttab</span><br><span class="line"></span><br><span class="line"><span class="comment">"将Tab键自动转换成空格 真正需要Tab键时使用[Ctrl + V + Tab]</span></span><br><span class="line"><span class="keyword">set</span> expandtab</span><br><span class="line"></span><br><span class="line"><span class="comment">"设置编码方式</span></span><br><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"自动判断编码时 依次尝试一下编码</span></span><br><span class="line"><span class="keyword">set</span> fileencodings=ucs-bom,utf-<span class="number">8</span>,cp936,gb18030,big5,euc-jp,euc-kr,latin1</span><br><span class="line"></span><br><span class="line"><span class="comment">"设置换行符为unix</span></span><br><span class="line"><span class="keyword">set</span> ff=unix</span><br><span class="line"></span><br><span class="line"><span class="comment">"检测文件类型</span></span><br><span class="line"><span class="keyword">filetype</span> <span class="keyword">on</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"针对不同的文件采用不同的缩进方式</span></span><br><span class="line"><span class="keyword">filetype</span> <span class="built_in">indent</span> <span class="keyword">on</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"允许插件</span></span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="keyword">on</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"启动智能补全</span></span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span></span><br><span class="line"></span><br><span class="line"><span class="comment">"==================================</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <hr>
 
       
@@ -470,7 +519,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -492,7 +541,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -500,6 +549,13 @@
 
           </nav>
 
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
@@ -525,6 +581,20 @@
 
           
           
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://zcatao.github.io" title="Zcatao" target="_blank">Zcatao</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
 
           
 
@@ -541,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-在工作目录下新建或打开Vim配置文件："><span class="nav-number">1.</span> <span class="nav-text">1.在工作目录下新建或打开Vim配置文件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-复制以下代码到刚刚的-vimrc文件"><span class="nav-number">2.</span> <span class="nav-text">2.复制以下代码到刚刚的.vimrc文件:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li></ol></div>
             
 
           </div>
@@ -561,7 +631,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
