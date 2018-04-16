@@ -24,7 +24,7 @@ categories: CS
 
     ```bash
     $ mkdir Blog && cd Blog
-    ```    
+    ```
 
 3. 克隆远程仓库，备份好.git文件夹后，清空当前目录。
 
